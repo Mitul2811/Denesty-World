@@ -1,6 +1,24 @@
 {
+  "name": "denesty-world-server",
+  "version": "1.0.0",
+  "description": "Joint server for Denesty World - Mobile & PC compatible",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build-frontend": "cd frontend && npm run build",
+    "deploy-all": "npm run build-frontend && npm start",
+    "install-deps": "npm install && cd frontend && npm install",
+    "git-push": "git add . && git commit -m \"Auto-update: $(date '+%Y-%m-%d %H:%M:%S')\" && git push origin main"
+  },
   "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.1"
-  }
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": ["react", "express", "mobile", "pc", "otp", "authentication"],
+  "author": "Mitul2811",
+  "license": "MIT"
 }
